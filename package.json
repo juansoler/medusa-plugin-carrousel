@@ -1,0 +1,67 @@
+{
+  "name": "@jsm406/medusa-plugin-carrousel",
+  "version": "1.0.0",
+  "description": "Medusa v2 Banner (Hero Slider) plugin with Admin UI and storefront API",
+  "author": "Juan Soler Márquez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juansoler/medusa-plugin-carrousel.git"
+  },
+  "homepage": "https://github.com/juansoler/medusa-plugin-carrousel",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./.medusa/server/modules/banner/index.js",
+  "types": "./.medusa/server/modules/banner/index.d.ts",
+  "scripts": {
+    "build": "medusa plugin:build",
+    "dev": "medusa plugin:develop",
+    "prepublishOnly": "medusa plugin:build"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./modules/*": "./.medusa/server/modules/*/index.js",
+    "./workflows": "./.medusa/server/workflows/index.js",
+    "./providers/*": "./.medusa/server/providers/*/index.js",
+    "./admin": {
+      "import": "./.medusa/server/src/admin/index.mjs",
+      "require": "./.medusa/server/src/admin/index.js",
+      "default": "./.medusa/server/src/admin/index.js"
+    },
+    "./*": "./.medusa/server/*.js"
+  },
+  "files": [
+    ".medusa/server"
+  ],
+  "keywords": [
+    "medusa-plugin-integration",
+    "medusa-v2",
+    "medusa",
+    "banner",
+    "hero-slider",
+    "carousel",
+    "slider"
+  ],
+  "devDependencies": {
+    "@medusajs/admin-sdk": "^2.0.0",
+    "@medusajs/cli": "^2.0.0",
+    "@medusajs/framework": "^2.0.0",
+    "@medusajs/icons": "^2.0.0",
+    "@medusajs/medusa": "^2.0.0",
+    "@medusajs/test-utils": "^2.0.0",
+    "@medusajs/ui": "^4.0.0",
+    "@swc/core": "^1.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  },
+  "peerDependencies": {
+    "@medusajs/admin-sdk": "^2.0.0",
+    "@medusajs/cli": "^2.0.0",
+    "@medusajs/framework": "^2.0.0",
+    "@medusajs/icons": "^2.0.0",
+    "@medusajs/medusa": "^2.0.0",
+    "@medusajs/test-utils": "^2.0.0",
+    "@medusajs/ui": "^4.0.0"
+  }
+}
